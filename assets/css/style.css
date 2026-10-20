@@ -1,0 +1,168 @@
+/* Global Styles */
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: radial-gradient(circle at top left, #dbeafe, #f8fafc, #e0e7ff);
+    min-height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    padding-top: 30px;
+}
+
+/* Card Styling */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Form Styling */
+
+label h6 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.form-control {
+    height: 42px;
+    border: 1px solid #d6dce5;
+    border-radius: 7px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.12);
+}
+
+/* Button Styling */
+
+.btn {
+    padding: 9px 15px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+.btn-warning:hover {
+    transform: translateY(-1px);
+    background-color: #e0a800;
+}
+
+/* Todo List Styling */
+
+#todoContainer {
+    gap: 10px;
+    border: none;
+}
+
+#todoContainer .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid #e8edf3;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow-wrap: anywhere;
+    transition: box-shadow 0.2s ease;
+}
+
+#todoContainer .list-group-item:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Todo Text */
+
+.todo-text {
+    flex: 1;
+    min-width: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Todo Action Buttons */
+
+.todo-actions {
+    display: flex;
+    flex-shrink: 0;
+    gap: 6px;
+}
+
+.todo-actions .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 767px) {
+    .container {
+        padding-top: 15px;
+    }
+
+    .card-body {
+        padding: 18px;
+    }
+
+    #todoContainer .list-group-item {
+        padding: 10px;
+    }
+
+    .todo-actions {
+        gap: 4px;
+    }
+
+    .todo-actions .btn {
+        padding: 5px 7px;
+    }
+}
+
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
